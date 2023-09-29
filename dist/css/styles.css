@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Albertnorm;
+    src: url(../assets/fonts/fonts/Albert_Sans/static/AlbertSans-Medium.ttf);
+}
+
+@font-face {
+    font-family: Albertbold;
+    src: url(../assets/fonts/fonts/Albert_Sans/static/AlbertSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: Albertboldlight;
+    src: url(../assets/fonts/fonts/Albert_Sans/static/AlbertSans-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: AlbertLight;
+    src: url(../assets/fonts/fonts/Albert_Sans/static/AlbertSans-Regular.ttf);
+}
+
+label, input{
+    display: block;
+}
+
+label{
+    margin-top: 10px;
+}
+
+
+nav{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: #D4CAA3;
+    justify-content: space-between;
+    align-items: center;
+
+    
+}
+a{
+        text-decoration: none;
+        color: #181818;
+        margin-right: 40px;
+        font-family: Albertnorm;
+}
+a:hover{
+    color: #FFFEF2;
+    transition: 0.2s;
+    border-bottom: solid 1px #FFFEF2;
+}
+
+h1{
+    text-transform: capitalize;
+}
+
+.brand{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 60px;
+    align-items: center;
+    .logo {
+    height: 40px;
+    width: 40px;
+    background-color: red;
+    
+    }
+
+    #name{
+        font-family: Albertbold;
+        color: #181818;
+    }
+}
+
+body{
+    background-color: #FFFDD1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    .wrapper{
+        margin: 50px;
+        width: 80%;
+        padding: 20px;
+        background-color: #D4CAA3;
+
+        .buttons{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            .label-button{
+                margin-top: 0;
+                font-family: AlbertLight;
+            }
+            .input-button{
+                font-family: AlbertLight;
+                width: 200px;
+                margin-top: 5px;
+            }
+
+            #getQuery{
+                margin-top: 5px;
+                width: 50%;
+                border-radius: 20px;
+                height: 35px;
+                border: none;
+                background-color: #FFFDD1;
+                cursor: pointer;
+            }
+
+            #getQuery:hover{
+                background-color: #928b70;
+            }
+
+            #getAllData{
+                width: 100px;
+                border-radius: 20px;
+                height: 35px;
+                border: none;
+                background-color: #FFFDD1;
+                cursor: pointer;
+            }
+
+            #getAllData:hover{
+                background-color: #928b70;
+            }
+        }
+    }
+}
+
+#modal{
+    position: fixed;
+    background-color: rgba(0,0,0,0.7);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .close{
+        visibility: visible;
+    }
+
+    .visible{
+        visibility: visible;
+    }
+    #model-click{
+    position: absolute;
+    background-color: rgba(128,128,128,0.7);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    }
+    
+    .modal-content-holder{
+        position: relative;
+        min-height: 300px;
+        min-width: 300px;
+        max-width: 60%;
+        background-color: #FFFDD1;
+        border-radius: 15px;
+        z-index: 99;
+        padding: 10px;
+        
+        .header{
+            font-family: Albertbold;
+            color: #181818;
+            font-size: larger;
+        }
+        .labels{
+            font-family: Albertnorm;
+        }
+        .box{
+            width: 80%;
+            height: 25px;
+        }
+        #addAlbum{
+            width: 35%;
+            background-color: #D4CAA3;
+            border: none;
+            height: 40px;
+            border-radius: 20px;
+            margin-top: 20px;
+            font-family: Albertnorm;
+            cursor: pointer;
+        }
+        #addAlbum:hover{
+            background-color: #928b70;
+        }
+        .close-button{
+            position: absolute;
+            top: 0;
+            padding: 10px;
+            cursor: pointer;
+            right: 0;
+            
+            
+        }
+
+        .close-cancel{
+            position: absolute;
+            bottom: 5%;
+            right: 50%;
+            padding: 5px 15px;
+            background-color: aquamarine;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+    }
+}
+
+#alldata{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+
+    .album-card{
+        width: 200px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+
+        .album-img{
+            width: 100%;
+            background-color: red;
+            height: 200px;
+            background-position: center;
+        }
+
+        .album-title{
+            margin-top: px;
+            height: 15px;
+            color: #181818;
+            font-family: AlbertLight;
+            font-size: 15px;
+            width: 300px;
+            
+        }
+
+        .album-artist{
+            margin-top: 0px;
+            height: 20px;
+            font-family: AlbertLight;
+            color: #181818;
+            width: 100%;
+            font-size: 13px;
+            
+        }
+    }
+}
+.header-text{
+            color: #181818;
+            font-family: Albertboldlight;
+            font-size: 50px;
+}

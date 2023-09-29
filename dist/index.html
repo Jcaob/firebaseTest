@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Start of Firebase</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+
+    <nav>
+        
+        <div class="brand">
+          
+          <h1 id="name">Jacobs Album Cataloge</h1>
+        </div>
+        <div class="links">
+            <a href="#" id="home">Add Album</a>
+        </div>
+        
+    </nav>
+    <div id="modal" style="display: none;">
+        <div id="model-click" class="close"></div>
+        <div class="modal-content-holder visible" 
+        style="display: flex; justify-content: center;
+        align-items: center;
+        flex-direction: column;">
+            <h1 class="header">Add Album</h1>
+            <label for="albumName" class="labels">Album Name</label>
+            <input type="text" id="albumName" class="box">
+            <label for="albumArtist" class="labels">Artist/Band Name</label>
+            <input type="text" id="albumArtist" class="box">
+            <label for="albumURL" class="labels">Album Photo URL</label>
+            <input type="text" id="albumURL" class="box" placeholder="./assets/images">
+            <label for="Genre" class="labels">Genre</label>
+            <input type="text" id="Genre" class="box" >
+            <input type="submit" value="add Album" id="addAlbum">
+            <div class="close-button close">X</div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <!-- <h1>Hello</h1>
+
+        <button id="login">log in</button>
+        <button id="logout">log out</button> -->
+
+        <!-- <div>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname">
+            <label for="email">Email</label>
+            <input type="text" id="email">
+            <label for="pw">password</label>
+            <input type="password" id="pw">
+            <input type="submit" value="Add User" id="addUser">
+        </div> -->
+        <div class="buttons">
+        <div>
+            <button id="getAllData">Refresh</button>
+        </div>
+        <div>
+            <label for="query-input" class="label-button">Seach By Genre</label>
+            <input type="text" id="query-input" placeholder="Try Rock, Rap,or Instumental" class="input-button">
+            <button id="getQuery">Get Albums</button>
+        </div>
+        </div>
+        
+        <div id="alldata"></div>
+
+        
+    </div>
+
+
+ <script src="lib/jquery-3.7.1.min.js"></script>
+<script src="app/app.js"></script>
+</body>
+</html>
